@@ -1,0 +1,24 @@
+{
+	"name": "socketin",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+		"start:client": "cd client && npm start",
+		"start:server": "cd server && npm run dev",
+		"lint": "eslint ./{client,server}/src/**",
+		"lint:fix": "eslint ./{client,server}/src/** --fix"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.31.0",
+		"@typescript-eslint/parser": "^5.31.0",
+		"concurrently": "^7.3.0",
+		"eslint": "^8.20.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.1"
+	}
+}
